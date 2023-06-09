@@ -15,7 +15,7 @@ This is a repository that contains the code for a Coin Flip game developed in HT
 **Usage Instructions**
 - Clone the repository to your local machine using the following command:
 
-git clone https://github.com/your-username/coin-flip-game.git
+git clone https://github.com/anaencinasd/coin-game.git
 
 - Open the index.html file in your web browser.
 
