@@ -1,41 +1,68 @@
-let heads = 0;
-let tails = 0;
+let cara = 0
+let cruz = 0
 let coin = document.querySelector(".coin");
-let flipBtn = document.querySelector ("#flip-button");
-let resetBtn = document.querySelector ("#reset-button");
+let flipBtn = document.querySelector("#flip");
+let resetBtn = document.querySelector("#reset");
 
-flipBtn.addEventListener("click", ()=>{
-    let i = Math.floor(Math.random()*2);
-    coin.getElementsByClassName.animation = "none";
+flipBtn.addEventListener("click", () => {
+    let i = Math.floor(Math.random() *2);
+    coin.style.animation = "none";
     if(i){
-        secTimeout(function(){
-            coin.getElementsByClassName.animation = "spin-heads 3s forwards";
-            }, 100);
-            heads++;
+        setTimeout (function(){
+            coin.style.animation = "spin-cara 3s forwards";
+        }, 100);
+        cara++;
     }
     else{
         setTimeout(function(){
-            coin.style.animation = "spin-tails 3s forwards";
+            coin.style.animation = "spin-cruz 3s forwards";
         }, 100);
-        tails++;
+        cruz++;
     }
     setTimeout(updateStats, 3000);
-    disableButton();
-});
-function updateStats(){
-    document.querySelector("#heads-count").textContent = `Heads: ${heads}`;
-    document.querySelector("#tails-count").textContent = `Tails: ${tails}`;
-}
-function disableButton(){
-    flipBtn.disabled = true;
-    setTimeout(function(){
-        flipBtn.disabled = false;
-    },3000);
-}
-resetBtn.addEventListener("click",() => {
-    coin.style.animation = "none";
-    heads = 0;
-    tails = 0;
-    updateStats();
-});
+    });
+
+    function updateStats(){
+        document.querySelector("#caraCounter").textContent = `Cara: ${cara}`;
+        document.querySelector("#cruzCounter").textContent = `Cruz: ${cruz}`;
+    }
+
+    resetBtn.addEventListener("click",() => {
+        coin.style.animation = "none";
+        cara = 0;
+        cruz = 0;
+        updateStats();
+    });
+
+    coin.addEventListener("click",()=> {
+        let i = Math.floor(Math.random() *2);
+        coin.style.animation = "none";
+        if(i){
+            setTimeout (function(){
+                coin.style.animation = "spin-cara 3s forwards";
+            }, 100);
+            cara++;
+        }
+        else{
+            setTimeout(function(){
+                coin.style.animation = "spin-cruz 3s forwards";
+            }, 100);
+            cruz++;
+        }
+        setTimeout(updateStats, 3000);
+        });
+    
+        function updateStats(){
+            document.querySelector("#caraCounter").textContent = `Cara: ${cara}`;
+            document.querySelector("#cruzCounter").textContent = `Cruz: ${cruz}`;
+        }
+    
+        resetBtn.addEventListener("click",() => {
+            coin.style.animation = "none";
+            cara = 0;
+            cruz = 0;
+            updateStats();
+        } )
+
         
+

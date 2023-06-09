@@ -6,103 +6,146 @@
 }
 
 body{
-
-    width: 100%;
-    background: purple;
+    height: 100%;
 
 }
 
-
-
-header{
-    background-color: pink;
+main{
     width: 100%;
-    height: 8rem;
-    display:flex;
+    height: 100%;
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
     align-items: center;
     
 }
-.stats{
-    display: flex;
-    color: #101020;
-    font-weight: 500;
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-top: 55px;
-    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+
+
+
+a{
+    color: aliceblue;
 }
 
-.stats p:nth-last-child(1){
-    margin-left: 50%;
-  }
-  .coin{
-      height: 150px;
-      width: 150px;
-      position: relative;
-      margin: 32px auto;
-      -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-  }
-  .coin img{
-      width: 145px;
-  }
-  .heads,.tails{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-  }
-  .tails{
-      transform: rotateX(180deg);
-  }
-  @keyframes spin-tails{
-      0%{
-          transform: rotateX(0);
-      }
-      100%{
-          transform: rotateX(1980deg);
-      }
-  }
-  @keyframes spin-heads{
-      0%{
-          transform: rotateX(0);
-      }
-      100%{
-          transform: rotateX(2160deg);
-      }
-  }
-  .buttons{
-      display: flex;
-      justify-content: space-between;
-  }
-  button{
-      width: 150px;
-      padding: 15px 0;
-      border: none;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  #flip-button{
-      background-color: #053469;
-      color: #ffffff;
-  }
-  #flip-button:disabled{
-      background-color: #e1e0ee;
-      border-color: #e1e0ee;
-      color: #101020;
-  }
-  #reset-button{
-      background-color: #674706;
-      color: white;
-  }
+.card{
+    width: 50%;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 4rem
+}
+
+.card-text{
+    font-size: 2.5rem;
+    padding: 5%;
+}
+
+html, body{
+    font-size: 62.5%;
+    background-color: #000249;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+
+.navbar{
+    background-color: #f6490d;
+   
+}
+
+.navbar-brand{
+    font-size: 3rem;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    color: #000249;
+    font-weight: 700px;
+}
 
 
 
+.btn{
+    background-color: #f6490d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    border-color: #f6490d;
+    color: antiquewhite;
+    margin: 3%;
+    border-radius: 15px; 
+    cursor:pointer;
+    padding: 1rem;
+}
 
+.counter{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 4%;
+    box-shadow: 15px 30px 35 px rgba (0,0,0,0.1);
+
+}
+
+.coin{
+    width: 50%;
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    transform-style: preserve-3d;
+
+    
+}
+
+.coin img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.cara, .cruz{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cruz{
+    transform: rotateX(180deg);
+}
+@keyframes spin-cruz{
+    0%{
+        transform: rotateX(0);
+    }
+
+    100%{
+        transform: rotateX(1980deg);
+    }
+
+}
+
+@keyframes spin-cara{
+    0%{
+        transform:rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
 
 
 
@@ -127,5 +170,36 @@ header{
     justify-content: center;
     color: purple;
     align-items: center;
+}
+
+#heads{
+    width: 30%;
+}
+
+#tails{
+    width: 30%;
+}
+
+#headerCoin{
+    width: 50px;
+    height: 50px;
+    
+}
+
+#flip{
+    background-color: #000249;
+    border-color: #000249;
+    color: #f6490d;
+    width: 75%;
+
+}
+
+
+
+#reset{
+
+color: #000249;
+width: 75%;
+
 }
 
